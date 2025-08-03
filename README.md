@@ -12,6 +12,7 @@
 
 ## How to Run Locally
 
+
 ### Requirements:
 - Docker + Docker Compose
 
@@ -21,3 +22,16 @@
 git clone https://github.com/yourname/iot-app
 cd iot-app
 docker-compose up --build
+
+```Local
+Frontend
+cd iot-frontend
+npm install
+npm start
+
+Backend
+cd iot-backend
+npm intsall
+node start.js
+
+
