@@ -1,0 +1,11 @@
+# Node
+node_modules/
+iot-frontend/node_modules/
+iot-backend/node_modules/
+
+# Builds
+iot-frontend/build/
+
+# Logs and sensitive files
+.env
+*.log
