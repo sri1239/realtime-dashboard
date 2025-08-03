@@ -1,24 +1,25 @@
+version: "3.9"
+
 services:
   backend:
-    build: ./backend
+    build: ./iot-backend
     ports:
       - "5000:5000"
     environment:
+      - JWT_SECRET=mysecret
       - MONGO_URI=mongodb://mongo:27017/iotdb
-      - JWT_SECRET=your_jwt_secret
     depends_on:
       - mongo
 
   frontend:
-    build: ./frontend
+    build: ./iot-frontend
     ports:
       - "3000:80"
     depends_on:
       - backend
 
   mongo:
-    image: mongo
-    container_name: iot-mongo
+    image: mongo:6
     ports:
       - "27017:27017"
     volumes:
